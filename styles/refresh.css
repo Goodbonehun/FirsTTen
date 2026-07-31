@@ -74,3 +74,44 @@ html[data-theme="sunset"] .verse{background:radial-gradient(circle at 50% 0,rgba
 html[data-theme="sunset"] .path{background:radial-gradient(circle at 8% 8%,rgba(0,230,210,.13),transparent 34%),radial-gradient(circle at 94% 88%,rgba(148,113,255,.16),transparent 38%),linear-gradient(145deg,#131c26,#181626)!important}
 html[data-theme="sunset"] .praise{background:radial-gradient(circle at 88% 5%,rgba(148,113,255,.24),transparent 34%),radial-gradient(circle at 10% 86%,rgba(0,230,210,.10),transparent 35%),linear-gradient(145deg,#080b12,#12101f)!important}
 html[data-theme="sunset"] .surrender{background:radial-gradient(circle at 10% 8%,rgba(0,230,210,.10),transparent 36%),radial-gradient(circle at 92% 85%,rgba(148,113,255,.19),transparent 40%),linear-gradient(145deg,#142029,#1b1729)!important}
+
+/* Mercedes-only dark mode: turquoise, night blue, violet, black and white. */
+html[data-theme="sunset"]{--text:#f4fbff;--muted:#9eb0c4;--cyan:#00e6d2;--cyan2:#70fff2;--violet:#8d6cff;--gold:#8d6cff;--line:rgba(0,230,210,.28)}
+html[data-theme="sunset"] body{background:radial-gradient(ellipse at 84% 4%,rgba(141,108,255,.16),transparent 29%),radial-gradient(ellipse at 8% 15%,rgba(0,230,210,.13),transparent 27%),linear-gradient(150deg,#010307 0%,#050b15 48%,#10091d 100%)!important}
+html[data-theme="sunset"] header:before{display:none!important;background:none!important;box-shadow:none!important}
+html[data-theme="sunset"] header:after{display:block!important;left:18%!important;right:18%!important;bottom:22px!important;height:1px!important;background:linear-gradient(90deg,transparent,#00e6d2,#8d6cff,transparent)!important;box-shadow:0 0 20px rgba(0,230,210,.42)!important}
+html[data-theme="sunset"] h1{background:linear-gradient(102deg,#ffffff 6%,#70fff2 39%,#00bfae 58%,#b7a5ff 83%,#ffffff)!important;-webkit-background-clip:text!important;color:transparent!important;text-shadow:0 0 42px rgba(0,230,210,.15)!important}
+html[data-theme="sunset"] h2{color:#f3f8ff!important}
+html[data-theme="sunset"] .lead{color:#b8c8d8!important}
+html[data-theme="sunset"] .tag,html[data-theme="sunset"] .tool-title{color:#00e6d2!important}
+html[data-theme="sunset"] .reference,html[data-theme="sunset"] .name,html[data-theme="sunset"] .daily-saint-quote strong,html[data-theme="sunset"] .daily-saint-quote small{color:#9e88ff!important}
+html[data-theme="sunset"] .daily-tools,html[data-theme="sunset"] .card{border-color:rgba(0,230,210,.18)!important;box-shadow:0 28px 82px rgba(0,0,0,.46),inset 0 1px rgba(255,255,255,.045)!important}
+html[data-theme="sunset"] .card:before{background:linear-gradient(132deg,rgba(0,230,210,.74),transparent 27%,transparent 69%,rgba(141,108,255,.7))!important}
+html[data-theme="sunset"] .daily-tools{background:radial-gradient(ellipse at 7% 0,rgba(0,230,210,.11),transparent 38%),radial-gradient(ellipse at 96% 100%,rgba(141,108,255,.14),transparent 43%),linear-gradient(145deg,#0d1620,#070a11)!important}
+html[data-theme="sunset"] .verse{background:radial-gradient(ellipse at 50% -5%,rgba(0,230,210,.16),transparent 45%),radial-gradient(ellipse at 94% 100%,rgba(141,108,255,.11),transparent 37%),linear-gradient(145deg,#071018,#0a0913)!important}
+html[data-theme="sunset"] .path{background:radial-gradient(ellipse at 7% 8%,rgba(0,230,210,.14),transparent 35%),radial-gradient(ellipse at 95% 88%,rgba(141,108,255,.19),transparent 40%),linear-gradient(145deg,#0d1722,#151126)!important}
+html[data-theme="sunset"] .praise{background:radial-gradient(ellipse at 90% 5%,rgba(141,108,255,.25),transparent 35%),radial-gradient(ellipse at 9% 88%,rgba(0,230,210,.12),transparent 37%),linear-gradient(145deg,#060a10,#120d20)!important}
+html[data-theme="sunset"] .surrender{background:radial-gradient(ellipse at 9% 7%,rgba(0,230,210,.12),transparent 37%),radial-gradient(ellipse at 93% 86%,rgba(141,108,255,.22),transparent 42%),linear-gradient(145deg,#101c25,#191329)!important}
+html[data-theme="sunset"] .carry{background:radial-gradient(ellipse at 50% -8%,rgba(0,230,210,.15),transparent 43%),radial-gradient(ellipse at 8% 104%,rgba(141,108,255,.17),transparent 43%),linear-gradient(145deg,#0b121b,#110d1d)!important}
+html[data-theme="sunset"] .sources-details{background:radial-gradient(ellipse at 96% 45%,rgba(141,108,255,.18),transparent 39%),radial-gradient(ellipse at 8% 0,rgba(0,230,210,.11),transparent 42%),linear-gradient(145deg,#09121b,#100d1c)!important}
+html[data-theme="sunset"] .archive-search-card{background:radial-gradient(ellipse at 3% 96%,rgba(0,230,210,.12),transparent 42%),radial-gradient(ellipse at 84% -8%,rgba(141,108,255,.2),transparent 45%),linear-gradient(145deg,#0d151e,#100c1c)!important}
+html[data-theme="sunset"] .confession{border-color:rgba(0,230,210,.34)!important;background:linear-gradient(120deg,rgba(0,230,210,.11),rgba(141,108,255,.12))!important;color:#bafff8!important}
+html[data-theme="sunset"] .highlight{color:#d9d1ff!important;border-left-color:#8d6cff!important}
+html[data-theme="sunset"] .step{border-color:rgba(141,108,255,.31)!important;background:linear-gradient(120deg,rgba(0,230,210,.07),rgba(141,108,255,.11))!important}
+html[data-theme="sunset"] .step b{color:#70fff2!important}
+html[data-theme="sunset"] .praise h2{background:linear-gradient(100deg,#fff,#70fff2,#a991ff)!important;-webkit-background-clip:text!important;color:transparent!important}
+html[data-theme="sunset"] .trinity{border-image:linear-gradient(90deg,transparent,#00e6d2,#8d6cff,transparent) 1!important;color:#f5f8ff!important}
+html[data-theme="sunset"] .reader-select,html[data-theme="sunset"] .search-input{background:#060b12!important;border-color:rgba(0,230,210,.28)!important;color:#f4fbff!important}
+html[data-theme="sunset"] button,html[data-theme="sunset"] .worship-button{border-color:rgba(0,230,210,.31)!important;background:linear-gradient(120deg,rgba(0,230,210,.09),rgba(141,108,255,.09))!important;color:#70fff2!important}
+html[data-theme="sunset"] button:hover,html[data-theme="sunset"] .worship-button:hover{border-color:#70fff2!important;background:linear-gradient(120deg,rgba(0,230,210,.17),rgba(141,108,255,.17))!important;color:#fff!important}
+html[data-theme="sunset"] .nav a{color:#dce9ef!important;border-color:rgba(0,230,210,.22)!important;background:rgba(2,9,14,.58)!important}
+html[data-theme="sunset"] .nav a:hover{color:#70fff2!important;border-color:rgba(0,230,210,.55)!important;background:rgba(0,230,210,.09)!important}
+html[data-theme="sunset"] .language-switch,html[data-theme="sunset"] .theme-dock{border-color:rgba(0,230,210,.24)!important;background:rgba(2,8,13,.76)!important}
+html[data-theme="sunset"] .language-switch a[aria-current="page"]{color:#03100f!important;background:linear-gradient(120deg,#70fff2,#00cbbb)!important;box-shadow:0 0 17px rgba(0,230,210,.24)!important}
+html[data-theme="sunset"] .theme-choice[aria-pressed="true"]{border-color:rgba(0,230,210,.5)!important;background:linear-gradient(135deg,rgba(0,230,210,.22),rgba(141,108,255,.18))!important}
+html[data-theme="sunset"] .theme-icon{color:#70fff2!important;background:rgba(0,230,210,.08)!important;box-shadow:none!important}
+html[data-theme="sunset"] .theme-choice[aria-pressed="true"] .theme-icon{color:#ffffff!important;background:linear-gradient(135deg,#00cbbb,#7254dc)!important;box-shadow:0 0 18px rgba(0,230,210,.24)!important}
+html[data-theme="sunset"] .font-controls{border-color:rgba(0,230,210,.22)!important;background:rgba(0,0,0,.28)!important}
+html[data-theme="sunset"] .font-controls button[aria-pressed="true"]{background:linear-gradient(135deg,#00cbbb,#7254dc)!important;color:#fff!important}
+html[data-theme="sunset"] .archive-item{color:#f4fbff!important;border-color:rgba(0,230,210,.19)!important;background:linear-gradient(120deg,rgba(0,230,210,.055),rgba(141,108,255,.065))!important}
+html[data-theme="sunset"] .archive-item:hover{border-color:rgba(0,230,210,.5)!important;background:linear-gradient(120deg,rgba(0,230,210,.11),rgba(141,108,255,.12))!important}
