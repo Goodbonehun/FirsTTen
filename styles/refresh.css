@@ -115,3 +115,11 @@ html[data-theme="sunset"] .font-controls{border-color:rgba(0,230,210,.22)!import
 html[data-theme="sunset"] .font-controls button[aria-pressed="true"]{background:linear-gradient(135deg,#00cbbb,#7254dc)!important;color:#fff!important}
 html[data-theme="sunset"] .archive-item{color:#f4fbff!important;border-color:rgba(0,230,210,.19)!important;background:linear-gradient(120deg,rgba(0,230,210,.055),rgba(141,108,255,.065))!important}
 html[data-theme="sunset"] .archive-item:hover{border-color:rgba(0,230,210,.5)!important;background:linear-gradient(120deg,rgba(0,230,210,.11),rgba(141,108,255,.12))!important}
+
+/* Lightweight header-only sheen, identical in Hungarian and English. */
+header h1{background-size:220% 100%!important;animation:header-sheen 8s ease-in-out infinite}
+header:after{background-size:220% 100%!important;animation:header-line-run 7s ease-in-out infinite}
+.theme-dock,.language-switch{transition:border-color .25s ease,background-color .25s ease,box-shadow .25s ease,transform .25s ease}
+.theme-dock:hover,.language-switch:hover{transform:translateY(-1px);box-shadow:0 11px 34px rgba(0,0,0,.18)!important}
+@keyframes header-sheen{0%,18%,100%{background-position:100% 50%}48%,66%{background-position:0% 50%}}
+@keyframes header-line-run{0%,15%,100%{background-position:100% 50%;opacity:.62}48%,68%{background-position:0% 50%;opacity:1}}
