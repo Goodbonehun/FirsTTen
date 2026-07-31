@@ -149,3 +149,22 @@ html[data-theme="sunrise"] .verse>.tag:before,html[data-theme="sunrise"] .verse>
 html[data-theme="sunrise"] .verse>.reference:before,html[data-theme="sunrise"] .verse>.reference:after{color:#d65300;text-shadow:0 0 8px rgba(214,83,0,.3)}
 @keyframes scripture-stars{0%,100%{opacity:.26;transform:scale(.96);filter:brightness(.9)}48%{opacity:.82;transform:scale(1.04);filter:brightness(1.35)}72%{opacity:.42;transform:scale(1)}}
 @media(max-width:620px){.verse>.tag:before,.verse>.tag:after{content:"✦ · ✧";letter-spacing:.18em}.verse>.reference:before,.verse>.reference:after{content:"· ✦ ·";letter-spacing:.14em}}
+
+/* Refined motion: a true, one-directional left-to-right light pass. */
+header h1{background-size:300% 100%!important;animation:header-light-pass 9s linear infinite!important}
+header:after{background-size:300% 100%!important;animation:header-line-pass 7.5s linear infinite!important}
+html[data-theme="sunset"] header h1{background-image:linear-gradient(105deg,#70fff2 4%,#00c7b5 22%,#9274f4 42%,#b9a7ff 52%,rgba(232,197,111,.58) 55%,#8d6cff 59%,#00d6c2 79%,#70fff2 96%)!important}
+html[data-theme="sunset"] header:after{background-image:linear-gradient(90deg,transparent 4%,#00e6d2 27%,#8d6cff 49%,rgba(232,197,111,.46) 52%,#8d6cff 56%,#00e6d2 77%,transparent 96%)!important;box-shadow:0 0 18px rgba(0,230,210,.28),0 0 10px rgba(232,197,111,.08)!important}
+@keyframes header-light-pass{0%{background-position:150% 50%}100%{background-position:-50% 50%}}
+@keyframes header-line-pass{0%{background-position:150% 50%;opacity:.66}100%{background-position:-50% 50%;opacity:.9}}
+
+/* Scripture: irregular, tiny white points instead of ordered star glyphs. */
+.verse>.tag:before,.verse>.tag:after,.verse>.reference:before,.verse>.reference:after{content:""!important;display:none!important;animation:none!important}
+.verse>*{position:relative;z-index:1}
+.verse:after{content:"";position:absolute;inset:22px 26px;z-index:0;pointer-events:none;border-radius:inherit;background:radial-gradient(circle at 7% 18%,rgba(255,255,255,.72) 0 1px,transparent 1.7px),radial-gradient(circle at 13% 68%,rgba(255,255,255,.38) 0 1px,transparent 1.8px),radial-gradient(circle at 21% 34%,rgba(255,255,255,.58) 0 1px,transparent 1.6px),radial-gradient(circle at 29% 83%,rgba(255,255,255,.3) 0 1px,transparent 1.7px),radial-gradient(circle at 38% 13%,rgba(255,255,255,.42) 0 1px,transparent 1.8px),radial-gradient(circle at 46% 72%,rgba(255,255,255,.26) 0 1px,transparent 1.7px),radial-gradient(circle at 54% 25%,rgba(255,255,255,.55) 0 1px,transparent 1.6px),radial-gradient(circle at 61% 88%,rgba(255,255,255,.36) 0 1px,transparent 1.8px),radial-gradient(circle at 69% 43%,rgba(255,255,255,.64) 0 1px,transparent 1.7px),radial-gradient(circle at 77% 9%,rgba(255,255,255,.31) 0 1px,transparent 1.8px),radial-gradient(circle at 84% 74%,rgba(255,255,255,.48) 0 1px,transparent 1.6px),radial-gradient(circle at 92% 31%,rgba(255,255,255,.68) 0 1px,transparent 1.7px),radial-gradient(circle at 18% 51%,rgba(255,255,255,.25) 0 .8px,transparent 1.5px),radial-gradient(circle at 73% 61%,rgba(255,255,255,.27) 0 .8px,transparent 1.5px);opacity:.3;filter:drop-shadow(0 0 3px rgba(255,255,255,.38));animation:scattered-stars 6.5s ease-in-out infinite}
+@keyframes scattered-stars{0%,100%{opacity:.18;filter:drop-shadow(0 0 2px rgba(255,255,255,.22))}37%{opacity:.42;filter:drop-shadow(0 0 4px rgba(255,255,255,.42))}71%{opacity:.27;filter:drop-shadow(0 0 2px rgba(255,255,255,.3))}}
+
+/* Trinity praise keeps its inner gold, but returns to the shared Mercedes frame. */
+html[data-theme="sunset"] .praise{border-color:rgba(0,230,210,.18)!important}
+html[data-theme="sunset"] .praise:before{background:linear-gradient(132deg,rgba(0,230,210,.74),transparent 27%,transparent 69%,rgba(141,108,255,.7))!important}
+html[data-theme="sunset"] .praise h2{line-height:1.2!important;padding:.04em .03em .16em!important;margin-bottom:.62em!important;overflow:visible!important}
