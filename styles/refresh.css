@@ -123,3 +123,29 @@ header:after{background-size:220% 100%!important;animation:header-line-run 7s ea
 .theme-dock:hover,.language-switch:hover{transform:translateY(-1px);box-shadow:0 11px 34px rgba(0,0,0,.18)!important}
 @keyframes header-sheen{0%,18%,100%{background-position:100% 50%}48%,66%{background-position:0% 50%}}
 @keyframes header-line-run{0%,15%,100%{background-position:100% 50%;opacity:.62}48%,68%{background-position:0% 50%;opacity:1}}
+
+/* A restrained gold note in the moving header light. */
+html[data-theme="sunset"] header h1{background-image:linear-gradient(104deg,#ffffff 4%,#70fff2 26%,#00c7b5 42%,#e8c56f 52%,#aa91ff 67%,#ffffff 88%)!important}
+html[data-theme="sunset"] header:after{background-image:linear-gradient(90deg,transparent 3%,#00e6d2 27%,#e8c56f 49%,#8d6cff 72%,transparent 97%)!important;box-shadow:0 0 21px rgba(0,230,210,.31),0 0 17px rgba(232,197,111,.16)!important}
+
+/* Praise of the Trinity: the single ceremonial gold–papaya exception. */
+html[data-theme="sunset"] .praise{border-color:rgba(232,197,111,.27)!important;background:radial-gradient(ellipse at 88% 4%,rgba(232,197,111,.2),transparent 34%),radial-gradient(ellipse at 9% 88%,rgba(240,92,18,.13),transparent 37%),radial-gradient(ellipse at 48% 45%,rgba(141,108,255,.1),transparent 48%),linear-gradient(145deg,#080a10,#17101b)!important;box-shadow:0 28px 84px rgba(0,0,0,.48),inset 0 1px rgba(255,243,207,.065),0 0 42px rgba(232,197,111,.055)!important}
+html[data-theme="sunset"] .praise:before{background:linear-gradient(132deg,rgba(232,197,111,.88),transparent 27%,transparent 68%,rgba(240,92,18,.68))!important}
+html[data-theme="sunset"] .praise>.tag{color:#e8c56f!important}
+html[data-theme="sunset"] .praise h2{background-image:linear-gradient(102deg,#fff9e8,#e8c56f 37%,#f06a20 61%,#c6b7ff 88%)!important;background-size:200% 100%!important;animation:praise-gold-breathe 9s ease-in-out infinite}
+html[data-theme="sunset"] .praise .name{color:#f0b45f!important;text-shadow:0 0 18px rgba(232,197,111,.14)}
+html[data-theme="sunset"] .praise .trinity{border-image:linear-gradient(90deg,transparent,#e8c56f,#f06a20,#8d6cff,transparent) 1!important;color:#fff8e7!important}
+@keyframes praise-gold-breathe{0%,100%{background-position:100% 50%}50%{background-position:0% 50%}}
+
+/* Scripture label and reference: tiny breathing stars, kept inside the verse card. */
+.verse>.tag,.verse>.reference{display:flex;align-items:center;justify-content:center;gap:clamp(10px,2.4vw,24px)}
+.verse>.tag:before,.verse>.tag:after{content:"✦  ·  ✧  ·  ✦  ·  ✧";color:currentColor;font-size:.57rem;letter-spacing:.32em;white-space:nowrap;opacity:.48;animation:scripture-stars 4.8s ease-in-out infinite}
+.verse>.tag:after{animation-delay:-2.4s}
+.verse>.reference:before,.verse>.reference:after{content:"·  ✦  ·  ✧  ·";color:currentColor;font-size:.52rem;letter-spacing:.28em;white-space:nowrap;opacity:.36;animation:scripture-stars 5.6s ease-in-out infinite}
+.verse>.reference:after{animation-delay:-2.8s}
+html[data-theme="sunset"] .verse>.tag:before,html[data-theme="sunset"] .verse>.tag:after{color:#70fff2;text-shadow:0 0 8px rgba(112,255,242,.8),0 0 18px rgba(0,230,210,.38)}
+html[data-theme="sunset"] .verse>.reference:before,html[data-theme="sunset"] .verse>.reference:after{color:#e8c56f;text-shadow:0 0 8px rgba(232,197,111,.7),0 0 16px rgba(141,108,255,.3)}
+html[data-theme="sunrise"] .verse>.tag:before,html[data-theme="sunrise"] .verse>.tag:after{color:#005bd9;text-shadow:0 0 8px rgba(0,91,217,.34)}
+html[data-theme="sunrise"] .verse>.reference:before,html[data-theme="sunrise"] .verse>.reference:after{color:#d65300;text-shadow:0 0 8px rgba(214,83,0,.3)}
+@keyframes scripture-stars{0%,100%{opacity:.26;transform:scale(.96);filter:brightness(.9)}48%{opacity:.82;transform:scale(1.04);filter:brightness(1.35)}72%{opacity:.42;transform:scale(1)}}
+@media(max-width:620px){.verse>.tag:before,.verse>.tag:after{content:"✦ · ✧";letter-spacing:.18em}.verse>.reference:before,.verse>.reference:after{content:"· ✦ ·";letter-spacing:.14em}}
