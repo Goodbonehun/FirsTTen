@@ -168,3 +168,9 @@ html[data-theme="sunset"] header:after{background-image:linear-gradient(90deg,tr
 html[data-theme="sunset"] .praise{border-color:rgba(0,230,210,.18)!important}
 html[data-theme="sunset"] .praise:before{background:linear-gradient(132deg,rgba(0,230,210,.74),transparent 27%,transparent 69%,rgba(141,108,255,.7))!important}
 html[data-theme="sunset"] .praise h2{line-height:1.2!important;padding:.04em .03em .16em!important;margin-bottom:.62em!important;overflow:visible!important}
+
+/* Header light front: turquoise travels left-to-right and leaves a violet trail. */
+html[data-theme="sunset"] header h1{isolation:isolate;background-image:linear-gradient(90deg,#8d6cff,#8d6cff)!important;background-size:100% 100%!important;animation:none!important;text-shadow:0 0 28px rgba(141,108,255,.1)!important}
+html[data-theme="sunset"] header h1:after{content:attr(data-title);position:absolute;inset:0;z-index:1;display:block;background-image:linear-gradient(90deg,transparent 0%,transparent 38%,rgba(141,108,255,.55) 43%,#00bfae 47%,#70fff2 50%,#00d8c4 53%,rgba(141,108,255,.72) 59%,transparent 68%,transparent 100%);background-size:320% 100%;background-position:115% 50%;-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 22px rgba(0,230,210,.08);animation:turquoise-violet-run 6.8s linear infinite;pointer-events:none}
+html[data-theme="sunset"] header:after{background-image:linear-gradient(90deg,transparent 0%,transparent 35%,rgba(141,108,255,.34) 41%,#00bfae 47%,#70fff2 50%,#00d8c4 53%,#8d6cff 60%,rgba(141,108,255,.2) 68%,transparent 78%,transparent 100%)!important;background-size:320% 100%!important;animation:turquoise-violet-run 6.8s linear infinite!important;box-shadow:0 0 16px rgba(0,230,210,.24),0 0 12px rgba(141,108,255,.16)!important}
+@keyframes turquoise-violet-run{0%{background-position:115% 50%}100%{background-position:-15% 50%}}

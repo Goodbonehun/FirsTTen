@@ -13,6 +13,7 @@ await mkdir(path.join(dist, "preview"), { recursive: true });
 
 const removeJuly24 = (html) => html.replace(/<a class="archive-item"[^>]*href="(?:\/nap\/2026-07-24|\/en\/day\/2026-07-24)"[\s\S]*?<\/a>/g, "");
 const prepare = (html) => `<!doctype html>${removeJuly24(html)}`
+  .replace(/<h1>([^<]+)<\/h1>/, '<h1 data-title="$1" aria-label="$1">$1</h1>')
   .replaceAll('data-theme-choice="light"', 'data-theme-choice="sunrise"')
   .replaceAll('data-theme-choice="dark"', 'data-theme-choice="sunset"')
   .replace(
