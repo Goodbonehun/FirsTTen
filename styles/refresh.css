@@ -153,6 +153,6 @@ html[data-theme="sunset"] .praise{border-color:rgba(0,230,210,.18)!important}
 html[data-theme="sunset"] .praise:before{background:linear-gradient(132deg,rgba(0,230,210,.74),transparent 27%,transparent 69%,rgba(141,108,255,.7))!important}
 html[data-theme="sunset"] .praise h2{line-height:1.2!important;padding:.04em .03em .16em!important;margin-bottom:.62em!important;overflow:visible!important}
 
-/* Only the thin header divider moves: a visible violet trail with a turquoise light front. */
-html[data-theme="sunset"] header:after{z-index:3!important;height:3px!important;opacity:1!important;background-image:linear-gradient(90deg,transparent 35%,rgba(0,230,210,.28) 42%,#00bfae 47%,#70fff2 50%,#00d8c4 53%,transparent 61%),linear-gradient(90deg,transparent 0%,rgba(141,108,255,.42) 10%,#8d6cff 32%,#8d6cff 84%,transparent 100%)!important;background-size:300% 100%,100% 100%!important;background-position:0 50%,0 50%!important;background-repeat:no-repeat!important;animation:turquoise-violet-line 5.8s linear infinite!important;box-shadow:0 0 8px rgba(141,108,255,.72),0 0 20px rgba(0,230,210,.42)!important}
-@keyframes turquoise-violet-line{from{background-position:0 50%,0 50%}to{background-position:100% 50%,0 50%}}
+/* Original hairline divider with only a restrained pulse. */
+html[data-theme="sunset"] header:after{z-index:3!important;height:1px!important;background:linear-gradient(90deg,transparent,#00e6d2,#8d6cff,transparent)!important;background-size:100% 100%!important;box-shadow:0 0 20px rgba(0,230,210,.42)!important;animation:header-line-pulse 4.8s ease-in-out infinite!important}
+@keyframes header-line-pulse{0%,100%{opacity:.58}50%{opacity:1}}
