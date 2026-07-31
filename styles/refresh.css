@@ -29,3 +29,48 @@ html[data-theme="sunrise"] .nav>a{background:rgba(255,255,255,.68)!important}
   .language-switch{top:10px;right:10px}
   .theme-dock{top:10px;right:84px}
 }
+
+/* Final palette: no circles; strong, readable sunrise and preserved Mercedes sunset. */
+html[data-theme="sunrise"]{--text:#0a1530;--muted:#384b6c;--cyan:#005bd9;--cyan2:#003f98;--violet:#173f9e;--gold:#b84300;--line:rgba(0,63,152,.28)}
+html[data-theme="sunrise"] body{background:linear-gradient(135deg,#f8fbff 0%,#eaf2ff 44%,#fff3e6 78%,#f9fbff 100%)!important;color:#0a1530!important}
+html[data-theme="sunrise"] body:before{opacity:.7!important;background:linear-gradient(122deg,rgba(0,35,92,.055),transparent 31%,rgba(241,91,0,.055) 72%,transparent)!important;background-size:auto!important;mask-image:none!important}
+html[data-theme="sunrise"] body:after{display:none!important;background:none!important}
+html[data-theme="sunrise"] .orb{background:radial-gradient(ellipse at 50% 48%,rgba(255,255,255,.98) 0 7%,rgba(255,112,16,.34) 24%,rgba(0,74,179,.18) 46%,transparent 70%)!important}
+html[data-theme="sunrise"] h1{background:linear-gradient(105deg,#071630 3%,#005bd9 34%,#002c6d 61%,#e45500 82%,#351300)!important;-webkit-background-clip:text!important;color:transparent!important}
+html[data-theme="sunrise"] .tag{color:#0048aa!important}
+html[data-theme="sunrise"] .lead{color:#273c61!important}
+html[data-theme="sunrise"] .card p,html[data-theme="sunrise"] .presence,html[data-theme="sunrise"] .ambient-description,html[data-theme="sunrise"] .reader-status{color:#263957!important}
+html[data-theme="sunrise"] h2,html[data-theme="sunrise"] blockquote,html[data-theme="sunrise"] .surrender .prayer{color:#081a3c!important}
+html[data-theme="sunrise"] .daily-tools,html[data-theme="sunrise"] .card{border-color:rgba(0,53,128,.25)!important;background-color:rgba(255,255,255,.95)!important;box-shadow:0 26px 70px rgba(3,30,73,.14),inset 0 1px rgba(255,255,255,1)!important}
+html[data-theme="sunrise"] .card:before{background:linear-gradient(135deg,rgba(241,91,0,.84),transparent 24%,transparent 70%,rgba(0,71,170,.78))!important}
+
+/* Each successive block receives light from a different direction. */
+html[data-theme="sunrise"] .daily-tools{background:linear-gradient(145deg,rgba(255,255,255,.98),rgba(235,243,255,.96))!important}
+html[data-theme="sunrise"] .verse{background:radial-gradient(ellipse at 8% 4%,rgba(242,91,0,.27),transparent 42%),radial-gradient(ellipse at 92% 96%,rgba(0,57,142,.23),transparent 48%),linear-gradient(145deg,#fffdfb,#edf4ff)!important}
+html[data-theme="sunrise"] .path{background:radial-gradient(ellipse at 58% -8%,rgba(242,91,0,.22),transparent 42%),radial-gradient(ellipse at 94% 82%,rgba(0,50,125,.25),transparent 48%),linear-gradient(150deg,#fdfefe,#edf4ff)!important}
+html[data-theme="sunrise"] .praise{background:radial-gradient(ellipse at 100% 8%,rgba(242,91,0,.23),transparent 40%),radial-gradient(ellipse at 4% 92%,rgba(0,67,163,.24),transparent 48%),linear-gradient(140deg,#f3f7ff,#fffaf5)!important}
+html[data-theme="sunrise"] .surrender{background:radial-gradient(ellipse at 2% 48%,rgba(242,91,0,.21),transparent 39%),radial-gradient(ellipse at 78% 106%,rgba(0,43,108,.27),transparent 49%),linear-gradient(145deg,#fffaf5,#eef4ff)!important}
+html[data-theme="sunrise"] .carry{background:radial-gradient(ellipse at 50% -12%,rgba(242,91,0,.25),transparent 43%),radial-gradient(ellipse at 8% 104%,rgba(0,68,166,.22),transparent 47%),linear-gradient(145deg,#fffdf9,#eef5ff)!important}
+html[data-theme="sunrise"] .sources-details{background:radial-gradient(ellipse at 96% 52%,rgba(242,91,0,.2),transparent 38%),radial-gradient(ellipse at 12% 0%,rgba(0,48,119,.24),transparent 45%),linear-gradient(150deg,#edf4ff,#fffaf6)!important}
+html[data-theme="sunrise"] .archive-search-card{background:radial-gradient(ellipse at 4% 96%,rgba(242,91,0,.22),transparent 40%),radial-gradient(ellipse at 82% -8%,rgba(0,48,119,.26),transparent 47%),linear-gradient(145deg,#fffaf5,#ecf3ff)!important}
+html[data-theme="sunrise"] .confession{border-color:rgba(0,70,170,.34)!important;background:linear-gradient(120deg,rgba(242,91,0,.2),rgba(0,70,170,.13))!important;color:#062f73!important}
+html[data-theme="sunrise"] .reference,html[data-theme="sunrise"] .tool-title,html[data-theme="sunrise"] .step b{color:#b33f00!important}
+html[data-theme="sunrise"] .highlight{color:#102e69!important;border-left-color:#ee5b00!important}
+html[data-theme="sunrise"] .praise h2{background:linear-gradient(100deg,#071a3c,#c74300,#005bd9)!important;-webkit-background-clip:text!important;color:transparent!important}
+html[data-theme="sunrise"] .reader-select,html[data-theme="sunrise"] .search-input{background:#fff!important;border-color:rgba(0,63,152,.32)!important;color:#071a3c!important}
+html[data-theme="sunrise"] button,html[data-theme="sunrise"] .worship-button{border-color:rgba(0,63,152,.42)!important;background:linear-gradient(120deg,rgba(242,91,0,.18),rgba(0,74,179,.13))!important;color:#06377f!important}
+html[data-theme="sunrise"] .archive-item{color:#071a3c!important;border-color:rgba(0,63,152,.24)!important;background:rgba(255,255,255,.68)!important}
+
+/* Sunset: explicit Formula 1 Mercedes palette, independent of sunrise. */
+html[data-theme="sunset"]{color-scheme:dark;--text:#f4f7f8;--muted:#a8b3bb;--cyan:#00e6d2;--cyan2:#70fff2;--violet:#9471ff;--gold:#e7c97a;--line:rgba(0,230,210,.28)}
+html[data-theme="sunset"] body{background:radial-gradient(circle at 86% 7%,rgba(148,113,255,.13),transparent 27%),radial-gradient(circle at 12% 14%,rgba(0,230,210,.10),transparent 26%),linear-gradient(150deg,#020408 0%,#090b13 52%,#130d20 100%)!important;color:var(--text)!important}
+html[data-theme="sunset"] body:before{opacity:1!important;background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.014) 1px,transparent 1px)!important;background-size:44px 44px!important;mask-image:linear-gradient(to bottom,#000,transparent 80%)!important}
+html[data-theme="sunset"] body:after{display:block!important;background:linear-gradient(112deg,transparent 18%,rgba(255,255,255,.025) 18.2%,transparent 18.5%)!important}
+html[data-theme="sunset"] .orb{background:radial-gradient(circle,rgba(255,255,255,.34) 0,rgba(0,230,210,.17) 18%,rgba(148,113,255,.12) 40%,transparent 68%)!important}
+html[data-theme="sunset"] h1{background:linear-gradient(100deg,#fff 8%,#70fff2 43%,#c9baff 72%,#e7c97a)!important;-webkit-background-clip:text!important;color:transparent!important;text-shadow:0 0 42px rgba(0,230,210,.12)!important}
+html[data-theme="sunset"] .daily-tools{background:radial-gradient(circle at 8% 0,rgba(0,230,210,.1),transparent 38%),radial-gradient(circle at 94% 100%,rgba(148,113,255,.13),transparent 42%),linear-gradient(145deg,rgba(16,23,32,.96),rgba(10,14,22,.96))!important}
+html[data-theme="sunset"] .card{border-color:rgba(255,255,255,.085)!important;background:linear-gradient(145deg,rgba(16,22,33,.94),rgba(7,11,17,.94))!important;box-shadow:0 28px 80px rgba(0,0,0,.42),inset 0 1px rgba(255,255,255,.04)!important}
+html[data-theme="sunset"] .verse{background:radial-gradient(circle at 50% 0,rgba(0,230,210,.13),transparent 43%),linear-gradient(145deg,#0b1119,#0c0d16)!important}
+html[data-theme="sunset"] .path{background:radial-gradient(circle at 8% 8%,rgba(0,230,210,.13),transparent 34%),radial-gradient(circle at 94% 88%,rgba(148,113,255,.16),transparent 38%),linear-gradient(145deg,#131c26,#181626)!important}
+html[data-theme="sunset"] .praise{background:radial-gradient(circle at 88% 5%,rgba(148,113,255,.24),transparent 34%),radial-gradient(circle at 10% 86%,rgba(0,230,210,.10),transparent 35%),linear-gradient(145deg,#080b12,#12101f)!important}
+html[data-theme="sunset"] .surrender{background:radial-gradient(circle at 10% 8%,rgba(0,230,210,.10),transparent 36%),radial-gradient(circle at 92% 85%,rgba(148,113,255,.19),transparent 40%),linear-gradient(145deg,#142029,#1b1729)!important}

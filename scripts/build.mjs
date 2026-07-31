@@ -11,7 +11,9 @@ await mkdir(path.join(dist, "server"), { recursive: true });
 await mkdir(path.join(dist, ".openai"), { recursive: true });
 
 const removeJuly24 = (html) => html.replace(/<a class="archive-item"[^>]*href="(?:\/nap\/2026-07-24|\/en\/day\/2026-07-24)"[\s\S]*?<\/a>/g, "");
-const prepare = (html) => `<!doctype html>${removeJuly24(html)}`.replace("</head>", `<style>${refresh}</style></head>`);
+const prepare = (html) => `<!doctype html>${removeJuly24(html)}`
+  .replace('root.dataset.theme = theme;', 'root.dataset.theme = theme === "light" ? "sunrise" : "sunset";')
+  .replace("</head>", `<style>${refresh}</style></head>`);
 
 const pages = {
   "/nap/2026-07-31": prepare(await readFile(path.join(pagesDir, "day-hu.html"), "utf8")),
