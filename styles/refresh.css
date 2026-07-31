@@ -116,17 +116,9 @@ html[data-theme="sunset"] .font-controls button[aria-pressed="true"]{background:
 html[data-theme="sunset"] .archive-item{color:#f4fbff!important;border-color:rgba(0,230,210,.19)!important;background:linear-gradient(120deg,rgba(0,230,210,.055),rgba(141,108,255,.065))!important}
 html[data-theme="sunset"] .archive-item:hover{border-color:rgba(0,230,210,.5)!important;background:linear-gradient(120deg,rgba(0,230,210,.11),rgba(141,108,255,.12))!important}
 
-/* Lightweight header-only sheen, identical in Hungarian and English. */
-header h1{background-size:220% 100%!important;animation:header-sheen 8s ease-in-out infinite}
-header:after{background-size:220% 100%!important;animation:header-line-run 7s ease-in-out infinite}
+/* Header controls keep their restrained interaction; only the divider light moves. */
 .theme-dock,.language-switch{transition:border-color .25s ease,background-color .25s ease,box-shadow .25s ease,transform .25s ease}
 .theme-dock:hover,.language-switch:hover{transform:translateY(-1px);box-shadow:0 11px 34px rgba(0,0,0,.18)!important}
-@keyframes header-sheen{0%,18%,100%{background-position:100% 50%}48%,66%{background-position:0% 50%}}
-@keyframes header-line-run{0%,15%,100%{background-position:100% 50%;opacity:.62}48%,68%{background-position:0% 50%;opacity:1}}
-
-/* A restrained gold note in the moving header light. */
-html[data-theme="sunset"] header h1{background-image:linear-gradient(104deg,#ffffff 4%,#70fff2 26%,#00c7b5 42%,#e8c56f 52%,#aa91ff 67%,#ffffff 88%)!important}
-html[data-theme="sunset"] header:after{background-image:linear-gradient(90deg,transparent 3%,#00e6d2 27%,#e8c56f 49%,#8d6cff 72%,transparent 97%)!important;box-shadow:0 0 21px rgba(0,230,210,.31),0 0 17px rgba(232,197,111,.16)!important}
 
 /* Praise of the Trinity: the single ceremonial gold–papaya exception. */
 html[data-theme="sunset"] .praise{border-color:rgba(232,197,111,.27)!important;background:radial-gradient(ellipse at 88% 4%,rgba(232,197,111,.2),transparent 34%),radial-gradient(ellipse at 9% 88%,rgba(240,92,18,.13),transparent 37%),radial-gradient(ellipse at 48% 45%,rgba(141,108,255,.1),transparent 48%),linear-gradient(145deg,#080a10,#17101b)!important;box-shadow:0 28px 84px rgba(0,0,0,.48),inset 0 1px rgba(255,243,207,.065),0 0 42px rgba(232,197,111,.055)!important}
@@ -150,14 +142,6 @@ html[data-theme="sunrise"] .verse>.reference:before,html[data-theme="sunrise"] .
 @keyframes scripture-stars{0%,100%{opacity:.26;transform:scale(.96);filter:brightness(.9)}48%{opacity:.82;transform:scale(1.04);filter:brightness(1.35)}72%{opacity:.42;transform:scale(1)}}
 @media(max-width:620px){.verse>.tag:before,.verse>.tag:after{content:"✦ · ✧";letter-spacing:.18em}.verse>.reference:before,.verse>.reference:after{content:"· ✦ ·";letter-spacing:.14em}}
 
-/* Refined motion: a true, one-directional left-to-right light pass. */
-header h1{background-size:300% 100%!important;animation:header-light-pass 9s linear infinite!important}
-header:after{background-size:300% 100%!important;animation:header-line-pass 7.5s linear infinite!important}
-html[data-theme="sunset"] header h1{background-image:linear-gradient(105deg,#70fff2 4%,#00c7b5 22%,#9274f4 42%,#b9a7ff 52%,rgba(232,197,111,.58) 55%,#8d6cff 59%,#00d6c2 79%,#70fff2 96%)!important}
-html[data-theme="sunset"] header:after{background-image:linear-gradient(90deg,transparent 4%,#00e6d2 27%,#8d6cff 49%,rgba(232,197,111,.46) 52%,#8d6cff 56%,#00e6d2 77%,transparent 96%)!important;box-shadow:0 0 18px rgba(0,230,210,.28),0 0 10px rgba(232,197,111,.08)!important}
-@keyframes header-light-pass{0%{background-position:150% 50%}100%{background-position:-50% 50%}}
-@keyframes header-line-pass{0%{background-position:150% 50%;opacity:.66}100%{background-position:-50% 50%;opacity:.9}}
-
 /* Scripture: irregular, tiny white points instead of ordered star glyphs. */
 .verse>.tag:before,.verse>.tag:after,.verse>.reference:before,.verse>.reference:after{content:""!important;display:none!important;animation:none!important}
 .verse>*{position:relative;z-index:1}
@@ -169,8 +153,6 @@ html[data-theme="sunset"] .praise{border-color:rgba(0,230,210,.18)!important}
 html[data-theme="sunset"] .praise:before{background:linear-gradient(132deg,rgba(0,230,210,.74),transparent 27%,transparent 69%,rgba(141,108,255,.7))!important}
 html[data-theme="sunset"] .praise h2{line-height:1.2!important;padding:.04em .03em .16em!important;margin-bottom:.62em!important;overflow:visible!important}
 
-/* Header light front: turquoise travels left-to-right and leaves a violet trail. */
-html[data-theme="sunset"] header h1{isolation:isolate;background-image:linear-gradient(90deg,#8d6cff,#8d6cff)!important;background-size:100% 100%!important;animation:none!important;text-shadow:0 0 28px rgba(141,108,255,.1)!important}
-html[data-theme="sunset"] header h1:after{content:attr(data-title);position:absolute;inset:0;z-index:1;display:block;background-image:linear-gradient(90deg,transparent 0%,transparent 38%,rgba(141,108,255,.55) 43%,#00bfae 47%,#70fff2 50%,#00d8c4 53%,rgba(141,108,255,.72) 59%,transparent 68%,transparent 100%);background-size:320% 100%;background-position:115% 50%;-webkit-background-clip:text;background-clip:text;color:transparent;text-shadow:0 0 22px rgba(0,230,210,.08);animation:turquoise-violet-run 6.8s linear infinite;pointer-events:none}
-html[data-theme="sunset"] header:after{background-image:linear-gradient(90deg,transparent 0%,transparent 35%,rgba(141,108,255,.34) 41%,#00bfae 47%,#70fff2 50%,#00d8c4 53%,#8d6cff 60%,rgba(141,108,255,.2) 68%,transparent 78%,transparent 100%)!important;background-size:320% 100%!important;animation:turquoise-violet-run 6.8s linear infinite!important;box-shadow:0 0 16px rgba(0,230,210,.24),0 0 12px rgba(141,108,255,.16)!important}
-@keyframes turquoise-violet-run{0%{background-position:115% 50%}100%{background-position:-15% 50%}}
+/* Only the thin header divider moves: violet trail, turquoise light front. */
+html[data-theme="sunset"] header:after{background-image:linear-gradient(90deg,transparent 0 34%,rgba(141,108,255,.18) 39%,#8d6cff 46%,#00bfae 51%,#70fff2 54%,transparent 59% 100%)!important;background-size:300% 100%!important;background-position:0 50%;animation:turquoise-violet-line 6.8s linear infinite!important;box-shadow:0 0 16px rgba(0,230,210,.24),0 0 12px rgba(141,108,255,.16)!important}
+@keyframes turquoise-violet-line{from{background-position:0 50%}to{background-position:100% 50%}}
