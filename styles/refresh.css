@@ -1,0 +1,31 @@
+/* Compact, discreet controls shared by both themes. */
+h1{font-size:clamp(2.45rem,7.2vw,5.15rem)!important;line-height:1.16!important;padding:.05em .04em .16em;overflow:visible}
+header{overflow:visible!important}
+.language-switch{position:fixed!important;top:16px;right:16px;z-index:80;width:auto!important;margin:0!important;padding:3px!important;gap:2px!important;border-radius:999px!important;box-shadow:0 8px 30px rgba(0,0,0,.12);backdrop-filter:blur(18px)}
+.language-switch a{min-width:31px!important;padding:5px 7px!important;font-size:.62rem!important;letter-spacing:.06em!important}
+.theme-dock{position:fixed!important;top:16px;right:94px;z-index:80;display:flex!important;width:auto!important;max-width:none!important;margin:0!important;padding:3px!important;gap:2px!important;border-radius:999px!important;box-shadow:0 8px 30px rgba(0,0,0,.12)!important;backdrop-filter:blur(18px)}
+.theme-dock-label,.theme-choice>span:last-child{display:none!important}
+.theme-choice{display:grid!important;place-items:center!important;width:31px!important;height:31px!important;min-height:31px!important;padding:0!important;border-radius:50%!important}
+.theme-icon{width:25px!important;height:25px!important;font-size:.78rem!important}
+
+/* Sunrise only: bright Williams-inspired calm with papaya accents. */
+html[data-theme="sunrise"]{--text:#101a2b;--muted:#526078;--cyan:#075ad7;--cyan2:#0349a8;--violet:#2148b8;--gold:#bc4c00;--line:rgba(5,83,196,.22)}
+html[data-theme="sunrise"] body{background:radial-gradient(circle at 82% 0,rgba(255,123,24,.18),transparent 25%),radial-gradient(circle at 5% 9%,rgba(17,103,239,.13),transparent 28%),linear-gradient(145deg,#ffffff 0%,#f4f8ff 42%,#fff4e9 76%,#ffffff 100%)!important;color:var(--text)}
+html[data-theme="sunrise"] body:before{opacity:.48!important;background-image:repeating-radial-gradient(circle at 88% 15%,transparent 0 42px,rgba(5,83,196,.09) 43px 44px,transparent 45px 76px),linear-gradient(112deg,transparent 18%,rgba(255,128,27,.07) 18.2%,transparent 18.55%)!important;background-size:auto!important;mask-image:linear-gradient(to bottom,#000,transparent 88%)!important}
+html[data-theme="sunrise"] body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:repeating-radial-gradient(circle at 8% 68%,transparent 0 68px,rgba(255,128,27,.075) 69px 70px,transparent 71px 110px),repeating-radial-gradient(circle at 93% 78%,transparent 0 94px,rgba(3,73,168,.055) 95px 96px,transparent 97px 142px)}
+html[data-theme="sunrise"] .orb{opacity:.7!important;background:radial-gradient(circle at 50% 55%,#fff 0 4%,#fff4df 8%,rgba(255,128,27,.33) 20%,rgba(20,100,226,.16) 42%,transparent 69%)!important}
+html[data-theme="sunrise"] h1{background:linear-gradient(105deg,#080d16 4%,#075ad7 36%,#1749b5 60%,#e75f00 82%,#111827)!important;-webkit-background-clip:text!important;color:transparent!important;text-shadow:0 14px 42px rgba(7,63,151,.1)!important}
+html[data-theme="sunrise"] .daily-tools,html[data-theme="sunrise"] .card{border-color:rgba(5,83,196,.15)!important;background:radial-gradient(circle at 7% 0,rgba(255,128,27,.09),transparent 34%),radial-gradient(circle at 97% 100%,rgba(5,83,196,.07),transparent 40%),rgba(255,255,255,.84)!important;box-shadow:0 24px 70px rgba(15,44,92,.1),inset 0 1px rgba(255,255,255,.95)!important}
+html[data-theme="sunrise"] .card:before{background:linear-gradient(130deg,rgba(255,111,0,.68),transparent 27%,transparent 68%,rgba(5,83,196,.55))!important}
+html[data-theme="sunrise"] .verse{background:radial-gradient(circle at 50% 0,rgba(255,128,27,.12),transparent 44%),linear-gradient(145deg,rgba(255,255,255,.97),rgba(242,247,255,.93))!important}
+html[data-theme="sunrise"] .path,html[data-theme="sunrise"] .praise,html[data-theme="sunrise"] .surrender,html[data-theme="sunrise"] .worship{background:radial-gradient(circle at 7% 5%,rgba(255,128,27,.1),transparent 34%),radial-gradient(circle at 94% 88%,rgba(5,83,196,.08),transparent 40%),rgba(255,255,255,.88)!important}
+html[data-theme="sunrise"] .theme-dock,html[data-theme="sunrise"] .language-switch{border-color:rgba(5,83,196,.18)!important;background:rgba(255,255,255,.82)!important}
+html[data-theme="sunrise"] .theme-choice[aria-pressed="true"]{border-color:rgba(231,95,0,.35)!important;background:linear-gradient(135deg,rgba(255,128,27,.3),rgba(5,83,196,.11))!important}
+html[data-theme="sunrise"] .nav>a{background:rgba(255,255,255,.68)!important}
+
+@media(max-width:600px){
+  h1{font-size:clamp(2.25rem,12.5vw,3.75rem)!important;line-height:1.18!important}
+  header{padding-top:92px!important}
+  .language-switch{top:10px;right:10px}
+  .theme-dock{top:10px;right:84px}
+}
