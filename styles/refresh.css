@@ -63,9 +63,9 @@ html[data-theme="sunrise"] .archive-item{color:#071a3c!important;border-color:rg
 
 /* Sunset: explicit Formula 1 Mercedes palette, independent of sunrise. */
 html[data-theme="sunset"]{color-scheme:dark;--text:#f4f7f8;--muted:#a8b3bb;--cyan:#00e6d2;--cyan2:#70fff2;--violet:#9471ff;--gold:#e7c97a;--line:rgba(0,230,210,.28)}
-html[data-theme="sunset"] body{background:radial-gradient(circle at 86% 7%,rgba(148,113,255,.13),transparent 27%),radial-gradient(circle at 12% 14%,rgba(0,230,210,.10),transparent 26%),linear-gradient(150deg,#020408 0%,#090b13 52%,#130d20 100%)!important;color:var(--text)!important}
-html[data-theme="sunset"] body:before{opacity:1!important;background-image:linear-gradient(rgba(255,255,255,.018) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.014) 1px,transparent 1px)!important;background-size:44px 44px!important;mask-image:linear-gradient(to bottom,#000,transparent 80%)!important}
-html[data-theme="sunset"] body:after{display:block!important;background:linear-gradient(112deg,transparent 18%,rgba(255,255,255,.025) 18.2%,transparent 18.5%)!important}
+html[data-theme="sunset"] body{background:radial-gradient(ellipse at 86% 7%,rgba(148,113,255,.13),transparent 31%),radial-gradient(ellipse at 12% 14%,rgba(0,230,210,.10),transparent 30%),linear-gradient(150deg,#020408 0%,#090b13 52%,#130d20 100%)!important;color:var(--text)!important}
+html[data-theme="sunset"] body:before{opacity:.65!important;background:radial-gradient(ellipse at 14% 28%,rgba(0,230,210,.065),transparent 68%),radial-gradient(ellipse at 88% 46%,rgba(148,113,255,.08),transparent 70%)!important;background-size:auto!important;mask-image:linear-gradient(to bottom,#000,transparent 86%)!important}
+html[data-theme="sunset"] body:after{display:block!important;background:radial-gradient(ellipse at 50% 18%,rgba(255,255,255,.025),transparent 68%)!important}
 html[data-theme="sunset"] .orb{background:radial-gradient(circle,rgba(255,255,255,.34) 0,rgba(0,230,210,.17) 18%,rgba(148,113,255,.12) 40%,transparent 68%)!important}
 html[data-theme="sunset"] h1{background:linear-gradient(100deg,#fff 8%,#70fff2 43%,#c9baff 72%,#e7c97a)!important;-webkit-background-clip:text!important;color:transparent!important;text-shadow:0 0 42px rgba(0,230,210,.12)!important}
 html[data-theme="sunset"] .daily-tools{background:radial-gradient(circle at 8% 0,rgba(0,230,210,.1),transparent 38%),radial-gradient(circle at 94% 100%,rgba(148,113,255,.13),transparent 42%),linear-gradient(145deg,rgba(16,23,32,.96),rgba(10,14,22,.96))!important}
@@ -77,7 +77,9 @@ html[data-theme="sunset"] .surrender{background:radial-gradient(circle at 10% 8%
 
 /* Mercedes-only dark mode: turquoise, night blue, violet, black and white. */
 html[data-theme="sunset"]{--text:#f4fbff;--muted:#9eb0c4;--cyan:#00e6d2;--cyan2:#70fff2;--violet:#8d6cff;--gold:#8d6cff;--line:rgba(0,230,210,.28)}
-html[data-theme="sunset"] body{background:radial-gradient(ellipse at 84% 4%,rgba(141,108,255,.16),transparent 29%),radial-gradient(ellipse at 8% 15%,rgba(0,230,210,.13),transparent 27%),linear-gradient(150deg,#010307 0%,#050b15 48%,#10091d 100%)!important}
+html[data-theme="sunset"] body{background:radial-gradient(ellipse 95% 62% at 4% 2%,rgba(0,230,210,.15),transparent 64%),radial-gradient(ellipse 88% 58% at 98% 11%,rgba(141,108,255,.2),transparent 62%),radial-gradient(ellipse 72% 46% at 48% 100%,rgba(232,197,111,.055),transparent 72%),linear-gradient(155deg,#01040a 0%,#07101a 46%,#10091d 100%)!important;background-attachment:fixed!important}
+html[data-theme="sunset"] body:before{opacity:.9!important;background:radial-gradient(ellipse 64% 38% at 14% 28%,rgba(45,255,232,.09),transparent 72%),radial-gradient(ellipse 58% 34% at 91% 42%,rgba(151,119,255,.12),transparent 74%),radial-gradient(ellipse 46% 28% at 52% 78%,rgba(255,255,255,.025),transparent 76%)!important;background-size:auto!important;mask-image:linear-gradient(to bottom,#000 0 72%,transparent 100%)!important;filter:blur(2px)}
+html[data-theme="sunset"] body:after{display:block!important;background:radial-gradient(ellipse 52% 23% at 18% 18%,rgba(112,255,242,.055),transparent 72%),radial-gradient(ellipse 50% 24% at 85% 66%,rgba(141,108,255,.07),transparent 74%)!important}
 html[data-theme="sunset"] header:before{display:none!important;background:none!important;box-shadow:none!important}
 html[data-theme="sunset"] header:after{display:block!important;left:18%!important;right:18%!important;bottom:22px!important;height:1px!important;background:linear-gradient(90deg,transparent,#00e6d2,#8d6cff,transparent)!important;box-shadow:0 0 20px rgba(0,230,210,.42)!important}
 html[data-theme="sunset"] h1{background:linear-gradient(102deg,#ffffff 6%,#70fff2 39%,#00bfae 58%,#b7a5ff 83%,#ffffff)!important;-webkit-background-clip:text!important;color:transparent!important;text-shadow:0 0 42px rgba(0,230,210,.15)!important}
@@ -176,10 +178,32 @@ html,body{overflow-x:hidden}
 @media(min-width:760px){.pwa-bottom-nav{left:auto;right:18px;transform:none}.new-content-cta{bottom:88px}.pwa-bottom-nav a,.pwa-bottom-nav button{min-width:76px}}
 @media(max-width:520px){body{padding-bottom:calc(82px + env(safe-area-inset-bottom))}main{padding-inline:10px}.pwa-bottom-nav{width:calc(100% - 20px);bottom:max(8px,env(safe-area-inset-bottom));justify-content:space-around;border-radius:22px}.pwa-bottom-nav a,.pwa-bottom-nav button{flex:1;min-width:0}.new-content-cta{left:14px;right:14px;bottom:88px;justify-content:center}.card{padding-inline:22px}header{padding-top:76px}}
 
-/* Downloadable FirsTTen brand asset. */
-.brand-kit{display:grid!important;grid-template-columns:auto 1fr;align-items:center;gap:clamp(22px,5vw,42px);background:radial-gradient(circle at 10% 50%,rgba(0,230,210,.12),transparent 34%),radial-gradient(circle at 92% 18%,rgba(141,108,255,.16),transparent 38%),linear-gradient(145deg,#09111b,#120d1d)!important}
-.brand-kit img{display:block;width:112px;height:112px;border-radius:26px;box-shadow:0 18px 42px rgba(0,0,0,.42),0 0 24px rgba(0,230,210,.12)}
-.brand-kit h2{font-size:clamp(1.65rem,4vw,2.4rem)!important;margin:.2em 0 .35em!important}.brand-kit p:not(.tag){margin:0 0 18px;color:#bcc8d0}
-.brand-download-button{display:inline-flex;align-items:center;justify-content:center;padding:13px 19px;border:1px solid rgba(232,197,111,.45);border-radius:999px;background:linear-gradient(120deg,rgba(232,197,111,.14),rgba(141,108,255,.12));color:#fff8e7;text-decoration:none;font:700 .8rem/1.2 Manrope,Arial,sans-serif;box-shadow:0 10px 28px rgba(0,0,0,.25)}
-.brand-download-button:hover{border-color:#e8c56f;background:linear-gradient(120deg,rgba(232,197,111,.22),rgba(141,108,255,.18))}
-@media(max-width:560px){.brand-kit{grid-template-columns:1fr;text-align:center}.brand-kit img{margin:auto}.brand-download-button{width:100%}}
+
+/* The verse stars live only in the header zone and pulse like a quiet night sky. */
+.verse{overflow:hidden!important}
+.verse:after{inset:14px 18px auto!important;height:156px!important;border-radius:28px 28px 0 0!important;background:radial-gradient(circle at 3% 24%,#fff 0 1.7px,transparent 2.5px),radial-gradient(circle at 7% 62%,rgba(112,255,242,.96) 0 1.2px,transparent 2.2px),radial-gradient(circle at 11% 11%,rgba(255,255,255,.88) 0 1px,transparent 2px),radial-gradient(circle at 16% 78%,rgba(183,165,255,.9) 0 1.5px,transparent 2.4px),radial-gradient(circle at 21% 38%,#fff 0 1.2px,transparent 2.1px),radial-gradient(circle at 26% 17%,rgba(112,255,242,.92) 0 1.6px,transparent 2.5px),radial-gradient(circle at 31% 68%,rgba(255,255,255,.8) 0 1px,transparent 1.9px),radial-gradient(circle at 36% 7%,rgba(231,201,122,.94) 0 1.3px,transparent 2.3px),radial-gradient(circle at 41% 49%,#fff 0 1.8px,transparent 2.7px),radial-gradient(circle at 47% 83%,rgba(112,255,242,.84) 0 1.1px,transparent 2px),radial-gradient(circle at 52% 21%,rgba(255,255,255,.92) 0 1.4px,transparent 2.4px),radial-gradient(circle at 57% 61%,rgba(183,165,255,.96) 0 1.7px,transparent 2.6px),radial-gradient(circle at 62% 8%,#fff 0 1px,transparent 2px),radial-gradient(circle at 67% 77%,rgba(231,201,122,.9) 0 1.4px,transparent 2.3px),radial-gradient(circle at 72% 35%,rgba(112,255,242,.96) 0 1.8px,transparent 2.7px),radial-gradient(circle at 77% 13%,rgba(255,255,255,.88) 0 1.1px,transparent 2px),radial-gradient(circle at 81% 69%,#fff 0 1.5px,transparent 2.5px),radial-gradient(circle at 86% 42%,rgba(183,165,255,.94) 0 1.2px,transparent 2.2px),radial-gradient(circle at 91% 18%,rgba(112,255,242,.9) 0 1.6px,transparent 2.5px),radial-gradient(circle at 96% 73%,#fff 0 1.3px,transparent 2.2px),radial-gradient(circle at 13% 49%,rgba(255,255,255,.7) 0 .8px,transparent 1.7px),radial-gradient(circle at 34% 89%,rgba(112,255,242,.72) 0 .8px,transparent 1.7px),radial-gradient(circle at 59% 42%,rgba(255,255,255,.75) 0 .8px,transparent 1.7px),radial-gradient(circle at 74% 91%,rgba(183,165,255,.78) 0 .8px,transparent 1.7px),radial-gradient(circle at 89% 88%,rgba(255,255,255,.72) 0 .8px,transparent 1.7px)!important;opacity:.86!important;filter:drop-shadow(0 0 5px rgba(112,255,242,.7)) drop-shadow(0 0 10px rgba(141,108,255,.25))!important;mask-image:linear-gradient(to bottom,#000 0 58%,transparent 100%);animation:verse-header-stars 3.4s ease-in-out infinite!important}
+@keyframes verse-header-stars{0%,100%{opacity:.52;filter:drop-shadow(0 0 3px rgba(112,255,242,.45)) drop-shadow(0 0 7px rgba(141,108,255,.18))}48%{opacity:1;filter:drop-shadow(0 0 7px rgba(112,255,242,.9)) drop-shadow(0 0 15px rgba(141,108,255,.4))}72%{opacity:.74}}
+
+/* Mobile containment for narrow phones, safe areas and enlarged text. */
+*,*:before,*:after{box-sizing:border-box}
+img,svg,video,canvas,iframe{max-width:100%;height:auto}
+main,header,.card,.daily-tools,.nav,.sources-details{min-width:0;max-width:100%}
+p,blockquote,h1,h2,h3,a,button{overflow-wrap:break-word}
+@media(max-width:430px){
+  main{width:100%!important;padding-inline:10px!important}
+  header{width:100%;padding-inline:8px!important;padding-top:78px!important}
+  .card,.daily-tools{width:100%;padding-inline:clamp(18px,5.2vw,23px)!important}
+  .nav{width:100%;gap:8px!important}.nav a{min-width:0!important;padding-inline:12px!important}
+  .theme-dock{right:80px!important}.language-switch{right:8px!important}
+  .pwa-bottom-nav{max-width:calc(100vw - 16px);padding:5px!important;gap:2px!important}
+  .pwa-bottom-nav a,.pwa-bottom-nav button{padding-inline:5px!important}
+  blockquote{font-size:clamp(1.2rem,6.2vw,1.55rem)!important}
+  .verse:after{left:12px!important;right:12px!important;height:136px!important}
+}
+@media(max-width:340px){
+  .theme-choice{width:29px!important;height:29px!important}.theme-icon{width:23px!important;height:23px!important}
+  .theme-dock{right:76px!important}.language-switch a{min-width:28px!important;padding-inline:5px!important}
+  .pwa-bottom-nav a,.pwa-bottom-nav button{font-size:.61rem!important;min-height:50px!important}
+  .card,.daily-tools{padding-inline:16px!important}
+}
+@media(prefers-reduced-motion:reduce){.verse:after{animation:none!important;opacity:.82!important}}
