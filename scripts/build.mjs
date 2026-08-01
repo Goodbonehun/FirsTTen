@@ -27,7 +27,7 @@ const prepare = (html) => `<!doctype html>${removeJuly24(html)}`
   .replace("</head>", `<style>${refresh}</style></head>`);
 
 const pages = {
-  "/nap/2026-07-31": prepare(await readFile(path.join(pagesDir, "day-hu.html"), "utf8")),
+  "/nap/2026-08-01": prepare(await readFile(path.join(pagesDir, "day-hu.html"), "utf8")),
   "/en/day/2026-07-31": prepare(await readFile(path.join(pagesDir, "day-en.html"), "utf8")),
   "/archive": prepare(await readFile(path.join(pagesDir, "archive-hu.html"), "utf8")),
   "/en/archive": prepare(await readFile(path.join(pagesDir, "archive-en.html"), "utf8"))
@@ -36,7 +36,7 @@ const pages = {
 const worker = `const pages=${JSON.stringify(pages)};
 export default { async fetch(request) {
   const url = new URL(request.url);
-  if (url.pathname === "/") return Response.redirect(new URL("/nap/2026-07-31", url), 302);
+  if (url.pathname === "/") return Response.redirect(new URL("/nap/2026-08-01", url), 302);
   if (url.pathname === "/en") return Response.redirect(new URL("/en/day/2026-07-31", url), 302);
   const html = pages[url.pathname];
   if (!html) return new Response("Not found", { status: 404 });
@@ -45,7 +45,7 @@ export default { async fetch(request) {
 
 await writeFile(path.join(dist, "server", "index.js"), worker, "utf8");
 await Promise.all([
-  writeFile(path.join(dist, "preview", "hu.html"), pages["/nap/2026-07-31"], "utf8"),
+  writeFile(path.join(dist, "preview", "hu.html"), pages["/nap/2026-08-01"], "utf8"),
   writeFile(path.join(dist, "preview", "en.html"), pages["/en/day/2026-07-31"], "utf8")
 ]);
 await writeFile(path.join(dist, ".openai", "hosting.json"), await readFile(path.join(root, ".openai", "hosting.json"), "utf8"), "utf8");

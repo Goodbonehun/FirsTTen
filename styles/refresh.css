@@ -153,6 +153,13 @@ html[data-theme="sunset"] .praise{border-color:rgba(0,230,210,.18)!important}
 html[data-theme="sunset"] .praise:before{background:linear-gradient(132deg,rgba(0,230,210,.74),transparent 27%,transparent 69%,rgba(141,108,255,.7))!important}
 html[data-theme="sunset"] .praise h2{line-height:1.2!important;padding:.04em .03em .16em!important;margin-bottom:.62em!important;overflow:visible!important}
 
+/* Give every display heading enough room for Hungarian accents and descenders. */
+h1,h2{line-height:1.16!important;padding-bottom:.16em!important;overflow:visible!important}
+.praise{padding-block:clamp(42px,7vw,76px)!important}
+.praise .name{margin-top:40px!important;padding-top:24px;border-top:1px solid rgba(232,197,111,.15)}
+.praise h2+.name{margin-top:10px!important;padding-top:0;border-top:0}
+.praise p{max-width:76ch!important;line-height:1.9!important}
+
 /* Original hairline divider with only a restrained pulse. */
 html[data-theme="sunset"] header:after{z-index:3!important;height:1px!important;background:linear-gradient(90deg,transparent,#00e6d2,#8d6cff,transparent)!important;background-size:100% 100%!important;box-shadow:0 0 20px rgba(0,230,210,.42)!important;animation:header-line-pulse 4.8s ease-in-out infinite!important}
 @keyframes header-line-pulse{0%,100%{opacity:.58}50%{opacity:1}}
