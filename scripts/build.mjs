@@ -6,11 +6,11 @@ const dist = path.join(root, "dist");
 const pagesDir = path.join(root, "pages");
 const publicDir = path.join(root, "public");
 const refresh = await readFile(path.join(root, "styles", "refresh.css"), "utf8");
-const manifest = await readFile(path.join(publicDir, "firstten-v5.webmanifest"), "utf8");
+const manifest = await readFile(path.join(publicDir, "firstten-v6.webmanifest"), "utf8");
 const serviceWorker = await readFile(path.join(publicDir, "sw.js"), "utf8");
 const pwaScript = await readFile(path.join(publicDir, "pwa.js"), "utf8");
 const binaryAssets = Object.fromEntries(await Promise.all(
-  ["firstten-favicon-32-v5.png", "firstten-app-icon-96-v5.png", "firstten-app-icon-192-v5.png", "firstten-app-icon-512-v5.png", "firstten-apple-touch-icon-v5.png", "og.png"].map(async name => [name, (await readFile(path.join(publicDir, name))).toString("base64")])
+  ["firstten-favicon-32-v6.png", "firstten-app-icon-96-v6.png", "firstten-app-icon-192-v6.png", "firstten-app-icon-512-v6.png", "firstten-apple-touch-icon-v6.png", "og.png"].map(async name => [name, (await readFile(path.join(publicDir, name))).toString("base64")])
 ));
 
 await rm(dist, { recursive: true, force: true });
@@ -19,8 +19,8 @@ await mkdir(path.join(dist, ".openai"), { recursive: true });
 await mkdir(path.join(dist, "preview"), { recursive: true });
 
 const removeJuly24 = (html) => html.replace(/<a class="archive-item"[^>]*href="(?:\/nap\/2026-07-24|\/en\/day\/2026-07-24)"[\s\S]*?<\/a>/g, "");
-const pwaHead = `<link rel="manifest" href="/firstten-v5.webmanifest"><link rel="apple-touch-icon" sizes="180x180" href="/firstten-apple-touch-icon-v5.png"><link rel="icon" type="image/png" sizes="32x32" href="/firstten-favicon-32-v5.png"><link rel="icon" type="image/png" sizes="192x192" href="/firstten-app-icon-192-v5.png"><link rel="shortcut icon" href="/firstten-favicon-32-v5.png"><meta name="application-name" content="FirsTTen"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="FirsTTen"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#020716"><meta property="og:type" content="website"><meta property="og:site_name" content="FirsTTen"><meta property="og:title" content="FirsTTen – napi útravaló"><meta property="og:description" content="Napi megérkezés Isten jelenlétébe."><meta property="og:image" content="https://firstten.goodbone.hu/og.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://firstten.goodbone.hu/og.png">`;
-const pwaShell = `<a class="new-content-cta" data-new-content-cta href="/nap/2026-08-01" hidden><span>Új</span> Megérkezett a mai útravaló</a><div class="install-note" data-install-note hidden role="status"></div><nav class="pwa-bottom-nav" aria-label="Alkalmazás"><a href="/" data-pwa-nav><img src="/firstten-app-icon-96-v5.png" alt=""><span>Ma</span></a><a href="/archive" data-pwa-nav><span class="pwa-archive-icon" aria-hidden="true">◫</span><span>Archívum</span></a><button type="button" data-install-pwa hidden><span aria-hidden="true">↓</span><span>Telepítés</span></button></nav><script src="/pwa.js?v=5" defer></script>`;
+const pwaHead = `<link rel="manifest" href="/firstten-v6.webmanifest"><link rel="apple-touch-icon" sizes="180x180" href="/firstten-apple-touch-icon-v6.png"><link rel="icon" type="image/png" sizes="32x32" href="/firstten-favicon-32-v6.png"><link rel="icon" type="image/png" sizes="192x192" href="/firstten-app-icon-192-v6.png"><link rel="shortcut icon" href="/firstten-favicon-32-v6.png"><meta name="application-name" content="FirsTTen"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="FirsTTen"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#020716"><meta property="og:type" content="website"><meta property="og:site_name" content="FirsTTen"><meta property="og:title" content="FirsTTen – napi útravaló"><meta property="og:description" content="Napi megérkezés Isten jelenlétébe."><meta property="og:image" content="https://firstten.goodbone.hu/og.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://firstten.goodbone.hu/og.png">`;
+const pwaShell = `<a class="new-content-cta" data-new-content-cta href="/nap/2026-08-01" hidden><span>Új</span> Megérkezett a mai útravaló</a><div class="install-note" data-install-note hidden role="status"></div><nav class="pwa-bottom-nav" aria-label="Alkalmazás"><a href="/" data-pwa-nav><img src="/firstten-app-icon-96-v6.png" alt=""><span>Ma</span></a><a href="/archive" data-pwa-nav><span class="pwa-archive-icon" aria-hidden="true">◫</span><span>Archívum</span></a><button type="button" data-install-pwa hidden><span aria-hidden="true">↓</span><span>Telepítés</span></button></nav><script src="/pwa.js?v=6" defer></script>`;
 const prepare = (html) => `<!doctype html>${removeJuly24(html)}`
   .replace(/<h1>([^<]+)<\/h1>/, '<h1 data-title="$1" aria-label="$1">$1</h1>')
   .replaceAll('data-theme-choice="light"', 'data-theme-choice="sunrise"')
@@ -46,8 +46,8 @@ const pages = {
 
 const worker = `const pages=${JSON.stringify(pages)};
 const binaryAssets=${JSON.stringify(binaryAssets)};
-const textAssets=${JSON.stringify({"/firstten-v5.webmanifest":manifest,"/sw.js":serviceWorker,"/pwa.js":pwaScript})};
-const mime={"firstten-v5.webmanifest":"application/manifest+json; charset=utf-8","sw.js":"text/javascript; charset=utf-8","pwa.js":"text/javascript; charset=utf-8","png":"image/png"};
+const textAssets=${JSON.stringify({"/firstten-v6.webmanifest":manifest,"/sw.js":serviceWorker,"/pwa.js":pwaScript})};
+const mime={"firstten-v6.webmanifest":"application/manifest+json; charset=utf-8","sw.js":"text/javascript; charset=utf-8","pwa.js":"text/javascript; charset=utf-8","png":"image/png"};
 export default { async fetch(request) {
   const url = new URL(request.url);
   if (url.pathname === "/") return Response.redirect(new URL("/nap/2026-08-01", url), 302);

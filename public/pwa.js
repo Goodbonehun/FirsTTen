@@ -45,7 +45,7 @@
   if ("serviceWorker" in navigator) {
     window.addEventListener("load", async () => {
       try {
-        const registration = await navigator.serviceWorker.register("/sw.js?v=5", {scope: "/", updateViaCache: "none"});
+        const registration = await navigator.serviceWorker.register("/sw.js?v=6", {scope: "/", updateViaCache: "none"});
         await registration.update();
         registration.waiting?.postMessage("SKIP_WAITING");
       } catch {}

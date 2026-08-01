@@ -1,0 +1,25 @@
+{
+  "id": "/firstten",
+  "name": "FirsTTen – napi útravaló",
+  "short_name": "FirsTTen",
+  "description": "Napi megérkezés Isten jelenlétébe: Ige, útravaló, dicsőítés és önátadás.",
+  "lang": "hu",
+  "dir": "ltr",
+  "start_url": "/?source=pwa&release=6",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["window-controls-overlay", "standalone", "minimal-ui"],
+  "orientation": "portrait-primary",
+  "background_color": "#020716",
+  "theme_color": "#020716",
+  "categories": ["lifestyle", "books", "education"],
+  "icons": [
+    {"src": "/firstten-app-icon-96-v6.png", "sizes": "96x96", "type": "image/png", "purpose": "any"},
+    {"src": "/firstten-app-icon-192-v6.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable"},
+    {"src": "/firstten-app-icon-512-v6.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable"}
+  ],
+  "shortcuts": [
+    {"name": "Mai útravaló", "short_name": "Ma", "url": "/", "icons": [{"src": "/firstten-app-icon-192-v6.png", "sizes": "192x192"}]},
+    {"name": "Korábbi útravalók", "short_name": "Archívum", "url": "/archive", "icons": [{"src": "/firstten-app-icon-192-v6.png", "sizes": "192x192"}]}
+  ]
+}
