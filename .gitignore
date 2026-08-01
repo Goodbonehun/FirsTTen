@@ -1,0 +1,6 @@
+dist/
+public/presence-icon-source.png
+*.tar.gz
+.DS_Store
+Thumbs.db
+
