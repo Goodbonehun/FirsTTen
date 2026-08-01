@@ -1,4 +1,4 @@
-# Jelenlét
+# FirsTTen
 
 Telepíthető, mobilra optimalizált napi lelki útravaló. A napi oldal az Igétől az elcsendesedésen és önátadáson át a Szentháromság dicsőítéséig vezet.
 
@@ -26,5 +26,4 @@ A build eredménye a `dist/` könyvtárba kerül. A GitHub Actions minden válto
 3. GitHub-ellenőrzés.
 4. Verziómentés és közzététel ChatGPT Sites-on.
 
-Az élő oldal: [jelenleted.goodbone.hu](https://jelenleted.goodbone.hu)
-
+Az élő oldal: [firstten.goodbone.hu](https://firstten.goodbone.hu)
