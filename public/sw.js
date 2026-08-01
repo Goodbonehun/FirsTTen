@@ -1,5 +1,5 @@
-const CACHE = "jelenlet-pwa-2026-08-01-v1";
-const CORE = ["/", "/archive", "/manifest.webmanifest", "/pwa.js", "/icon-192.png", "/icon-512.png", "/apple-touch-icon.png"];
+const CACHE = "firstten-pwa-2026-08-01-v2";
+const CORE = ["/", "/archive", "/manifest.webmanifest", "/pwa.js", "/icon-192.png", "/icon-512.png", "/apple-touch-icon.png", "/firstten-logo-original.png"];
 
 self.addEventListener("install", event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(CORE)).then(() => self.skipWaiting()));

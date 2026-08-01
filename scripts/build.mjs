@@ -10,7 +10,7 @@ const manifest = await readFile(path.join(publicDir, "manifest.webmanifest"), "u
 const serviceWorker = await readFile(path.join(publicDir, "sw.js"), "utf8");
 const pwaScript = await readFile(path.join(publicDir, "pwa.js"), "utf8");
 const binaryAssets = Object.fromEntries(await Promise.all(
-  ["icon-96.png", "icon-192.png", "icon-512.png", "apple-touch-icon.png", "og.png"].map(async name => [name, (await readFile(path.join(publicDir, name))).toString("base64")])
+  ["icon-96.png", "icon-192.png", "icon-512.png", "apple-touch-icon.png", "og.png", "firstten-logo-original.png"].map(async name => [name, (await readFile(path.join(publicDir, name))).toString("base64")])
 ));
 
 await rm(dist, { recursive: true, force: true });
@@ -19,7 +19,7 @@ await mkdir(path.join(dist, ".openai"), { recursive: true });
 await mkdir(path.join(dist, "preview"), { recursive: true });
 
 const removeJuly24 = (html) => html.replace(/<a class="archive-item"[^>]*href="(?:\/nap\/2026-07-24|\/en\/day\/2026-07-24)"[\s\S]*?<\/a>/g, "");
-const pwaHead = `<link rel="manifest" href="/manifest.webmanifest"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png"><meta name="application-name" content="Jelenlét"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Jelenlét"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#020716"><meta property="og:type" content="website"><meta property="og:site_name" content="Jelenlét"><meta property="og:title" content="Jelenlét – napi útravaló"><meta property="og:description" content="Napi megérkezés Isten jelenlétébe."><meta property="og:image" content="https://jelenleted.goodbone.hu/og.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://jelenleted.goodbone.hu/og.png">`;
+const pwaHead = `<link rel="manifest" href="/manifest.webmanifest"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png"><meta name="application-name" content="FirsTTen"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="FirsTTen"><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#020716"><meta property="og:type" content="website"><meta property="og:site_name" content="FirsTTen"><meta property="og:title" content="FirsTTen – napi útravaló"><meta property="og:description" content="Napi megérkezés Isten jelenlétébe."><meta property="og:image" content="https://jelenleted.goodbone.hu/og.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://jelenleted.goodbone.hu/og.png">`;
 const pwaShell = `<a class="new-content-cta" data-new-content-cta href="/nap/2026-08-01" hidden><span>Új</span> Megérkezett a mai útravaló</a><div class="install-note" data-install-note hidden role="status"></div><nav class="pwa-bottom-nav" aria-label="Alkalmazás"><a href="/" data-pwa-nav><img src="/icon-96.png" alt=""><span>Ma</span></a><a href="/archive" data-pwa-nav><span class="pwa-archive-icon" aria-hidden="true">◫</span><span>Archívum</span></a><button type="button" data-install-pwa hidden><span aria-hidden="true">↓</span><span>Telepítés</span></button></nav><script src="/pwa.js" defer></script>`;
 const prepare = (html) => `<!doctype html>${removeJuly24(html)}`
   .replace(/<h1>([^<]+)<\/h1>/, '<h1 data-title="$1" aria-label="$1">$1</h1>')
@@ -63,6 +63,7 @@ export default { async fetch(request) {
 await writeFile(path.join(dist, "server", "index.js"), worker, "utf8");
 await Promise.all([
   writeFile(path.join(dist, "preview", "hu.html"), pages["/nap/2026-08-01"], "utf8"),
-  writeFile(path.join(dist, "preview", "en.html"), pages["/en/day/2026-07-31"], "utf8")
+  writeFile(path.join(dist, "preview", "en.html"), pages["/en/day/2026-07-31"], "utf8"),
+  writeFile(path.join(dist, "preview", "archive.html"), pages["/archive"], "utf8")
 ]);
 await writeFile(path.join(dist, ".openai", "hosting.json"), await readFile(path.join(root, ".openai", "hosting.json"), "utf8"), "utf8");
