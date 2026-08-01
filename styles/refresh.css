@@ -270,3 +270,25 @@ p,blockquote,h1,h2,h3,a,button{overflow-wrap:break-word}
   .praise{padding-block:50px!important}
   footer{padding-block:32px!important}
 }
+
+/* Gold-only Scripture sky with a protected, perfectly readable label. */
+.verse:after{filter:brightness(0) saturate(100%) invert(86%) sepia(69%) saturate(1065%) hue-rotate(342deg) brightness(104%) contrast(102%) drop-shadow(0 0 8px rgba(255,211,105,.95)) drop-shadow(0 0 22px rgba(232,185,79,.6))!important}
+.verse>.tag:before,.verse>.tag:after{display:none!important;content:""!important;animation:none!important}
+.verse>.tag{display:flex!important;width:max-content!important;max-width:calc(100% - 28px);margin-inline:auto!important;padding:8px 18px!important;border:1px solid rgba(232,197,111,.24);border-radius:999px;background:rgba(7,14,21,.94)!important;box-shadow:0 0 18px 12px rgba(7,14,21,.82),inset 0 1px rgba(255,235,177,.1)!important;color:#f2cf78!important;text-shadow:0 0 10px rgba(255,211,105,.82),0 0 22px rgba(232,185,79,.5)!important}
+html[data-theme="sunset"] .verse>.tag{color:#f2cf78!important}
+html[data-theme="sunrise"] .verse>.tag{background:rgba(255,250,239,.96)!important;border-color:rgba(184,96,0,.22)!important;box-shadow:0 0 18px 12px rgba(255,250,239,.9),inset 0 1px rgba(255,255,255,1)!important;color:#a94700!important;text-shadow:0 0 10px rgba(232,133,28,.28)!important}
+
+/* Brighter two-corner reflections and a stronger glass surface. */
+.card,.daily-tools{-webkit-backdrop-filter:blur(30px) saturate(178%) brightness(1.12)!important;backdrop-filter:blur(30px) saturate(178%) brightness(1.12)!important}
+html[data-theme="sunset"] .card,html[data-theme="sunset"] .daily-tools{border-color:rgba(112,255,242,.29)!important;box-shadow:0 30px 88px rgba(0,0,0,.48),inset 0 1px rgba(255,255,255,.13),inset 0 0 48px rgba(112,255,242,.035)!important}
+html[data-theme="sunset"] .card:before{background:linear-gradient(132deg,rgba(112,255,242,.98),rgba(0,230,210,.28) 18%,transparent 34%,transparent 64%,rgba(141,108,255,.34) 82%,rgba(183,165,255,.96))!important;filter:drop-shadow(0 0 7px rgba(112,255,242,.36)) drop-shadow(0 0 10px rgba(141,108,255,.3))}
+html[data-theme="sunset"] .daily-tools{background:radial-gradient(ellipse at 4% 0,rgba(0,230,210,.24),transparent 42%),radial-gradient(ellipse at 98% 100%,rgba(141,108,255,.28),transparent 46%),linear-gradient(145deg,rgba(15,28,39,.86),rgba(9,10,20,.82))!important}
+html[data-theme="sunset"] .verse{background:radial-gradient(ellipse at 4% 0,rgba(0,230,210,.2),transparent 39%),radial-gradient(ellipse at 98% 100%,rgba(141,108,255,.24),transparent 42%),linear-gradient(145deg,rgba(7,17,25,.86),rgba(10,8,20,.84))!important}
+html[data-theme="sunset"] .path{background:radial-gradient(ellipse at 4% 3%,rgba(0,230,210,.24),transparent 40%),radial-gradient(ellipse at 98% 96%,rgba(141,108,255,.3),transparent 44%),linear-gradient(145deg,rgba(13,27,39,.86),rgba(21,16,38,.82))!important}
+html[data-theme="sunset"] .praise{background:radial-gradient(ellipse at 4% 3%,rgba(0,230,210,.22),transparent 40%),radial-gradient(ellipse at 98% 96%,rgba(141,108,255,.34),transparent 45%),linear-gradient(145deg,rgba(7,13,20,.86),rgba(19,12,33,.82))!important}
+html[data-theme="sunset"] .surrender{background:radial-gradient(ellipse at 4% 3%,rgba(0,230,210,.22),transparent 41%),radial-gradient(ellipse at 98% 96%,rgba(141,108,255,.31),transparent 45%),linear-gradient(145deg,rgba(16,31,41,.86),rgba(25,18,42,.82))!important}
+html[data-theme="sunset"] .carry,html[data-theme="sunset"] .sources-details,html[data-theme="sunset"] .archive-search-card{background:radial-gradient(ellipse at 4% 3%,rgba(0,230,210,.22),transparent 41%),radial-gradient(ellipse at 98% 96%,rgba(141,108,255,.3),transparent 45%),linear-gradient(145deg,rgba(10,22,32,.86),rgba(18,13,32,.82))!important}
+html[data-theme="sunrise"] .card,html[data-theme="sunrise"] .daily-tools{border-color:rgba(0,83,196,.3)!important;background-color:rgba(255,255,255,.82)!important;box-shadow:0 28px 78px rgba(3,30,73,.18),inset 0 1px rgba(255,255,255,1),inset 0 0 42px rgba(255,255,255,.56)!important}
+html[data-theme="sunrise"] .card:before{background:linear-gradient(132deg,rgba(255,119,27,.94),rgba(255,119,27,.2) 19%,transparent 35%,transparent 64%,rgba(0,91,217,.23) 82%,rgba(0,91,217,.9))!important;filter:drop-shadow(0 0 7px rgba(255,119,27,.22)) drop-shadow(0 0 9px rgba(0,91,217,.2))}
+.verse:after{height:132px!important;mask-image:linear-gradient(to bottom,#000 0 54%,rgba(0,0,0,.7) 72%,transparent 96%)!important}
+@media(max-width:430px){.verse:after{height:118px!important}}

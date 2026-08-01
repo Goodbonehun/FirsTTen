@@ -1,5 +1,5 @@
-const CACHE = "firstten-pwa-2026-08-01-v4";
-const CORE = ["/", "/archive", "/firstten-v4.webmanifest", "/pwa.js", "/firstten-favicon-32-v4.png", "/firstten-app-icon-192-v4.png", "/firstten-app-icon-512-v4.png", "/firstten-apple-touch-icon-v4.png"];
+const CACHE = "firstten-pwa-2026-08-01-v5";
+const CORE = ["/", "/archive", "/firstten-v5.webmanifest", "/pwa.js?v=5", "/firstten-favicon-32-v5.png", "/firstten-app-icon-192-v5.png", "/firstten-app-icon-512-v5.png", "/firstten-apple-touch-icon-v5.png"];
 
 self.addEventListener("install", event => {
   event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(CORE)).then(() => self.skipWaiting()));
